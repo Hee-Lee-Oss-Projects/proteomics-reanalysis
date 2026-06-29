@@ -1,0 +1,36 @@
+{
+  "id": "proteomics-reanalysis-allowlist-002",
+  "title": "Dataset allow-list schema + license/PII/re-identification gate",
+  "project": "proteomics-reanalysis",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "proteomics", "open-science", "reproducibility", "data-licensing"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Reproducible reanalysis of open cancer proteomics (PRIDE/ProteomeXchange) is only permissible on open-access, de-identified data. Controlled-access repositories (dbGaP, EGA, individual-level biobanks) and any identifiable patient data are strictly out of scope and require authorized access + IRB this project does not have. Before any dataset is downloaded, the project needs a machine-readable allow-list and a binding license/PII/re-identification gate so no out-of-scope dataset can ever be processed. Mass-spec data also carries a proteogenomic re-identification risk (variant peptides can leak germline-identifying information), which the gate must address.",
+  "objective": "Define the dataset allow-list schema and the blocking license + PII + re-identification gate that every candidate dataset must pass (with a committed PASS/REJECT artifact) before any download or processing.",
+  "acceptanceCriteria": [
+    "Allow-list schema captures: accession (PXD/...), repository, declared license + URL + committed snapshot (SHA-256 + archived URL), accessClass (open | controlled | unknown), instrument/acquisition (DDA/DIA/labeled), piiDetermination, reidDetermination, and status (approved | rejected | pending).",
+    "Objective gate rule: PASS only if accessClass=open is established from a cited source statement AND the license is verified for the specific accession AND PII and re-identification determinations are recorded; controlled or unknown access = REJECT (no default-allow).",
+    "dbGaP, EGA, individual-level biobanks, and any identifiable patient data are hard-REJECT and flagged per Elyos refusal guardrails.",
+    "COSMIC and OncoKB are flagged non-commercial: annotation-only-under-terms and never embedded in or redistributed with outputs.",
+    "Re-identification rule: variant/proteogenomic identity output is default-denied unless the License+Compliance reviewer clears the specific dataset and use.",
+    "Produces a committed, reviewable PASS/REJECT artifact per dataset recording which checks ran and what fired; output documentation licensed CC-BY-4.0.",
+    "pnpm build && pnpm test && pnpm lint pass for any committed schema/validator tooling; commit is DCO signed-off."
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\proteomics-reanalysis\\PLAN.md",
+    "C:\\code\\elyos\\docs\\good-deed-definition.md",
+    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "PRIDE Archive / ProteomeXchange dataset license terms (per accession)",
+    "UniProt CC-BY-4.0; COSMIC and OncoKB non-commercial license terms"
+  ],
+  "output": "A documented dataset allow-list schema plus the blocking license/PII/re-identification gate checklist, committed to the project repo, that all dataset-intake tasks must use before any download.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
