@@ -1,0 +1,33 @@
+{
+  "id": "proteomics-reanalysis-browser-024",
+  "title": "Static results browser over manifests + aggregate tables",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["proteomics", "open-science", "reproducibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Aggregate result tables and run manifests stored as flat files are technically accessible but not easily discoverable or browseable by community members (researchers, students, curators) who want to explore what has been reanalyzed and how. A simple static HTML/JS browser over the committed manifests and aggregate tables — with no accounts, no PII, no hosted compute — makes the project's outputs navigable without adding privacy or security risk.",
+  "objective": "Implement a static results browser (HTML/JS, no server-side compute, no accounts, no PII) that lets users browse the project's run manifests, datasheets, and aggregate result tables.",
+  "acceptanceCriteria": [
+    "A static HTML/JS results browser is implemented that reads committed run manifests and aggregate result tables and renders them in a navigable interface.",
+    "The browser requires no server-side compute, no user accounts, and handles no PII; it can be hosted via GitHub Pages or equivalent static hosting.",
+    "The browser displays for each reanalysis: dataset accession, pipeline version, container digests, key result summary, datasheet link, and run manifest link.",
+    "The browser handles the case where no results are yet available gracefully (empty state).",
+    "Pipeline/browser code is MIT-licensed; commit is DCO signed-off; pnpm build && pnpm test && pnpm lint pass."
+  ],
+  "resources": [
+    "proteomics-reanalysis-datasheet-016 (datasheet format to display)",
+    "proteomics-reanalysis-pilot-009 (first manifest and tables to browse)",
+    "PLAN.md — Tech stack (static reports section)",
+    "TASKS.md — Backlog, browser-024 row"
+  ],
+  "output": "A committed PR containing the static results browser, deployable to GitHub Pages, displaying run manifests and aggregate tables for completed reanalyses; MIT-licensed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "proteomics-reanalysis-reuse-019",
+  "title": "Track and verify external reuse/citation events",
+  "project": "proteomics-reanalysis",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "proteomics", "open-science", "reproducibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M3 requires at least one verifiable external reuse or citation event — evidence that the reanalysis outputs are actually being used by the community. Self-reported reuse does not count; the evidence must be independently verifiable (e.g., a published paper citing the reanalysis, a dataset repository linking to the pipeline, or a confirmed downstream analysis). The tracking mechanism set up in datasheet-016 is used to capture these events.",
+  "objective": "Identify, verify, and record at least one external reuse or citation event for a project reanalysis, using independently verifiable evidence.",
+  "acceptanceCriteria": [
+    "At least one external reuse or citation event is identified: e.g., a published paper citing the reanalysis, a dataset entry linking to the pipeline or manifest, or a confirmed downstream analysis by a third party not affiliated with the project.",
+    "The evidence is independently verifiable (e.g., a DOI, a URL to a repository or publication, or a public commit from a third-party org) — self-reported reuse alone does not satisfy this criterion.",
+    "The reuse/citation event is recorded in the tracking mechanism from datasheet-016 with a timestamp, evidence URL, and description.",
+    "The tracking record is licensed CC-BY-4.0 and committed to the project repo."
+  ],
+  "resources": [
+    "proteomics-reanalysis-datasheet-016 (reuse/citation tracking mechanism)",
+    "proteomics-reanalysis-steward-018 (confirmed partner to follow up with)",
+    "TASKS.md — M3, reuse-019 acceptance criteria"
+  ],
+  "output": "A committed record of at least one independently verifiable external reuse or citation event for a project reanalysis; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

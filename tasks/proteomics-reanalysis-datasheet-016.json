@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-datasheet-016",
+  "title": "Per-reanalysis datasheets + reuse/citation tracking setup",
+  "project": "proteomics-reanalysis",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "For the reanalysis outputs to be reusable and citable, each reanalysis needs a structured datasheet that documents provenance, license, limitations, and how to cite it. A reuse/citation tracking mechanism is also needed so the project can measure real-world adoption — a key metric for Elyos 'delivered, not merged'. The datasheet template should be standardized across reanalyses so the community can rely on a consistent format.",
+  "objective": "Create a standardized per-reanalysis datasheet template and produce the first datasheet for the pilot reanalysis, plus set up a mechanism for tracking external reuse and citation events.",
+  "acceptanceCriteria": [
+    "A standardized per-reanalysis datasheet template is defined covering: dataset accession + title, pipeline version, container digests, run manifest reference, output license (CC-BY-4.0), attribution requirements (original dataset authors, repository, reference databases), limitations, 'not medical advice' notice, and a 'how to cite' section.",
+    "The first datasheet is completed for the pilot reanalysis (pilot-009) using the template.",
+    "A mechanism for tracking external reuse and citation events is set up (e.g., a CITATION.cff file, a tracking log, or a GitHub Discussions thread), with instructions for reporters.",
+    "Datasheets are licensed CC-BY-4.0 and committed to the project repo."
+  ],
+  "resources": [
+    "proteomics-reanalysis-report-011 (pilot reanalysis report to draw from)",
+    "proteomics-reanalysis-pilot-009 (run manifest reference for the pilot datasheet)",
+    "TASKS.md — M2, datasheet-016 row",
+    "PLAN.md — Attribution & output license section"
+  ],
+  "output": "A committed standardized datasheet template plus the first pilot datasheet, and a reuse/citation tracking setup; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

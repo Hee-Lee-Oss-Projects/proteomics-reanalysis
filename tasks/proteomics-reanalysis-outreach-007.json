@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-outreach-007",
+  "title": "Partner/steward outreach + candidate dataset shortlist + requestor contact",
+  "project": "proteomics-reanalysis",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "proteomics", "open-science", "reproducibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The Elyos 'delivered, not merged' bar requires that at least one named partner/steward has adopted, hosted, cited, or formally requested a reanalysis. At project start, no steward is secured and verifiedNeed is false for all tasks. Partner/steward outreach is a hard M0/M1 objective — without it the project cannot declare itself shipped. Candidate stewards include the EMBL-EBI PRIDE team, nf-core/proteomics community, cancer-data consortia using open data, and original dataset authors. A candidate dataset shortlist is also needed so the pilot triage task (gate-pilot-008) has a ranked set to work from.",
+  "objective": "Conduct outreach to candidate partner/steward organizations, produce a shortlist of candidate open PRIDE cancer datasets suitable for the first reanalysis, and log at least one initial contact with a potential requestor (dataset author, curator, or reproducibility initiative).",
+  "acceptanceCriteria": [
+    "A shortlist of at least 3 candidate open PRIDE/ProteomeXchange cancer datasets is documented, each with: accession, repository, rough dataset size, acquisition type (DDA/DIA), and a suitability note for donated-session budget.",
+    "At least one outreach thread with a potential partner or steward (e.g., PRIDE team, nf-core/proteomics, a dataset author, or a reproducibility initiative) is opened and its status logged.",
+    "At least one candidate requestor (dataset author, curator, or steward) has been contacted and the contact is recorded.",
+    "The outreach and shortlist document is committed to the project repo, licensed CC-BY-4.0, and clearly states that verifiedNeed remains false until a named partner confirms adoption/citation/request."
+  ],
+  "resources": [
+    "PLAN.md — Problem & beneficiaries, Partner org section",
+    "TASKS.md — M0, outreach-007 row",
+    "PRIDE Archive / ProteomeXchange — open cancer proteomics dataset listings",
+    "nf-core/proteomics community — potential steward"
+  ],
+  "output": "A committed outreach log and candidate dataset shortlist document recording partner contacts, candidate datasets, and the current outreach status; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-repro-standard-003",
+  "title": "Reproducibility standard (immutable container digests, version pinning, run-manifest schema, numeric-tolerance policy, countable-assertion unit)",
+  "project": "proteomics-reanalysis",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["proteomics", "cancer", "reproducibility", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The project's core value is making cancer-proteomics reanalyses reproducible by a third party. Without a binding standard that mandates immutable container digests, version-pinned tools, a machine-readable run manifest, and a declared numeric-tolerance policy, individual pipeline tasks will diverge on what 'reproducible' means. The standard must also fix the countable 'assertion' unit so the 100%-provenance CI gate is mechanically verifiable rather than aspirational.",
+  "objective": "Publish the project's reproducibility standard, covering: immutable container digest requirements (no floating tags), pinned tool and reference-DB versions with checksums, the run-manifest schema, the numeric-tolerance policy for non-deterministic stages, and the definition of the countable assertion unit the provenance CI gate measures.",
+  "acceptanceCriteria": [
+    "The standard mandates immutable container digests (no floating tags) and pinned tool plus reference-DB versions with SHA-256 checksums on all pipeline components.",
+    "The run-manifest schema is defined, capturing: dataset accession + input checksums, container digests, tool versions, all parameters, reference-DB versions/checksums, random seeds, operator, environment, and duration.",
+    "The countable 'assertion' unit is fixed (e.g., one published result-table row / one differential comparison / one summary statistic) so the 100%-provenance CI gate is mechanically checkable.",
+    "The numeric-tolerance policy is stated: exact match where pipeline stages are deterministic; a declared, justified per-stage tolerance band for non-deterministic stages (search engines, some quant steps); tolerance is published with each reanalysis.",
+    "The standard document is licensed CC-BY-4.0 and committed to the project repo."
+  ],
+  "resources": [
+    "PLAN.md — Solution approach & architecture, Key decisions section",
+    "TASKS.md — M0 acceptance criteria for repro-standard-003",
+    "PLAN.md — Data model (RunManifest)"
+  ],
+  "output": "A committed reproducibility standard document defining immutable container digest requirements, the run-manifest schema, the numeric-tolerance policy, and the countable assertion unit; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "proteomics-reanalysis-scale-017",
+  "title": "Reanalyze datasets #3-#5 (DDA/DIA) with manifests + datasheets",
+  "project": "proteomics-reanalysis",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M3 requires at least 5 open datasets reanalyzed cumulatively (the pilot DDA + DIA dataset from M1/M2 are datasets #1 and #2). Datasets #3–#5 broaden the coverage and demonstrate that the pipeline is general-purpose, not one-off. Each must pass the allow-list gate before processing. Each ships a run manifest, a datasheet, an honest concordance/divergence statement, and only aggregate result tables. Raw data is never re-hosted.",
+  "objective": "Reanalyze three additional open PRIDE cancer datasets (#3, #4, #5 in the project catalog) end-to-end using the established DDA/DIA pipelines, producing a run manifest and datasheet for each.",
+  "acceptanceCriteria": [
+    "Each of the three additional datasets (bringing the cumulative total to at least 5) has passed the allow-list gate with a committed PASS artifact before any download or processing.",
+    "Each dataset is reanalyzed end-to-end in pinned containers with a complete run manifest following repro-standard-003.",
+    "100% of published assertions for each reanalysis carry provenance and pass the CI provenance gate.",
+    "Each reanalysis ships a datasheet (using the template from datasheet-016) and an honest concordance/divergence statement vs. the original publication.",
+    "Only small aggregate result tables are published (CC-BY-4.0); raw mass-spec files are referenced by accession only and never re-hosted.",
+    "Commits are DCO signed-off; pnpm build && pnpm test && pnpm lint pass."
+  ],
+  "resources": [
+    "proteomics-reanalysis-dia-013 (DIA pipeline)",
+    "proteomics-reanalysis-datasheet-016 (datasheet template)",
+    "proteomics-reanalysis-allowlist-002 (gate schema for each dataset)",
+    "TASKS.md — M3, scale-017 acceptance criteria"
+  ],
+  "output": "Committed run manifests, datasheets, concordance/divergence statements, and aggregate result tables for datasets #3–#5; aggregate tables CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

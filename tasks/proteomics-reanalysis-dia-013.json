@@ -1,0 +1,35 @@
+{
+  "id": "proteomics-reanalysis-dia-013",
+  "title": "DIA pipeline (DIA-NN) containerized + validated",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Data-independent acquisition (DIA) with tools like DIA-NN represents a distinct analysis mode from DDA. After the DDA pipeline is proven in M1, adding DIA support broadens the scope of datasets the project can address. The DIA pipeline must follow the same reproducibility standard: pinned containers (immutable digests), complete run manifests, 100%-provenance CI gate, and FDR validation — run on an approved open DIA dataset from the allow-list.",
+  "objective": "Implement a containerized DIA reanalysis pipeline (DIA-NN) that meets the same reproducibility standard as the DDA pipeline: immutable digest containers, complete run manifest, FDR-controlled and provenance-tracked quantities on an approved open DIA dataset.",
+  "acceptanceCriteria": [
+    "A containerized DIA reanalysis pipeline using DIA-NN (pinned version, immutable container digest) is implemented within the Nextflow workflow, following the same structure as the DDA pipeline.",
+    "The pipeline runs end-to-end on an approved open DIA dataset (passed allow-list gate, open-access, de-identified, license verified, re-id determined).",
+    "FDR-controlled quantities are validated by the FDR/statistics harness from fdr-010.",
+    "A complete run manifest is produced per the schema in repro-standard-003; 100% of published assertions pass the CI provenance gate.",
+    "Numeric tolerance for DIA-NN's non-deterministic steps is declared and justified.",
+    "Pipeline code is MIT-licensed; aggregate tables are CC-BY-4.0; commit is DCO signed-off; pnpm build && pnpm test && pnpm lint pass."
+  ],
+  "resources": [
+    "proteomics-reanalysis-pilot-009 (DDA pipeline to pattern after)",
+    "proteomics-reanalysis-fdr-010 (FDR validation harness)",
+    "proteomics-reanalysis-provenance-005 (CI provenance gate)",
+    "PLAN.md — Tech stack (DIA-NN), Pipeline stages",
+    "TASKS.md — M2, dia-013 acceptance criteria"
+  ],
+  "output": "A committed PR containing the containerized DIA pipeline (DIA-NN), validated on an approved open DIA dataset with complete run manifest and passing CI; code MIT, tables CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "proteomics-reanalysis-gate-pilot-008",
+  "title": "Triage + gate one pilot open PRIDE cancer DDA dataset",
+  "project": "proteomics-reanalysis",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "proteomics", "data-licensing", "open-science", "reproducibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M1 requires one approved open PRIDE cancer DDA dataset as its starting point. Before any data is downloaded, the dataset must pass the allow-list gate defined in allowlist-002 and the re-identification policy from reid-policy-006, reviewed and approved by the License+Compliance reviewer. The gate produces a committed PASS artifact per dataset. Without this gate, the pipeline task (pilot-009) cannot legally start. Dataset selection must also be sized to fit donated-session budgets.",
+  "objective": "Select and run one pilot open PRIDE cancer DDA dataset through the full allow-list compliance gate, producing a committed PASS artifact that authorizes pilot-009 to begin processing.",
+  "acceptanceCriteria": [
+    "A public PRIDE/ProteomeXchange cancer DDA dataset is selected that is sized to fit donated-session budgets (e.g., manageable raw file count/size for a single session).",
+    "The dataset passes the allow-list gate with a committed PASS artifact: accessClass=open established from a cited source statement, license verified and snapshotted (SHA-256 + archived URL) for the specific accession, PII determination recorded, and re-identification determination recorded (variant identity default-denied per reid-policy-006).",
+    "The dataset is confirmed not controlled-access and not identifiable; dbGaP/EGA/biobank/individual-level data is hard-rejected if proposed.",
+    "COSMIC/OncoKB are noted as not to be embedded in any outputs from this dataset.",
+    "The PASS artifact is committed to datasets/allowlist.yml (or equivalent) and reviewed/approved by the License+Compliance reviewer before pilot-009 begins.",
+    "The triage document is licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "proteomics-reanalysis-allowlist-002 (gate schema and rules)",
+    "proteomics-reanalysis-reid-policy-006 (re-identification policy)",
+    "proteomics-reanalysis-reviewer-001 (reviewer must be named before this task starts)",
+    "proteomics-reanalysis-outreach-007 (candidate dataset shortlist)",
+    "PRIDE Archive / ProteomeXchange — dataset search and license lookup"
+  ],
+  "output": "A committed allow-list PASS artifact for one open PRIDE cancer DDA dataset, approved by the License+Compliance reviewer, authorizing pilot-009 to proceed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

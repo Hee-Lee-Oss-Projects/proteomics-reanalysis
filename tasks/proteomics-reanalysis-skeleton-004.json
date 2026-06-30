@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-skeleton-004",
+  "title": "Containerized pipeline skeleton + CI smoke test (Nextflow/nf-core-style)",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["proteomics", "cancer", "reproducibility", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "All downstream reanalysis tasks depend on a containerized pipeline skeleton that enforces the reproducibility standard from M0. The skeleton must integrate the workflow manager (Nextflow/nf-core-style), reference containers by immutable digest, and include a CI smoke test to prove end-to-end execution before any real dataset work begins. This is the foundational infrastructure all subsequent pipeline tasks build on.",
+  "objective": "Implement the containerized pipeline skeleton with a Nextflow (nf-core-style) workflow that references containers by immutable digest, passes a CI smoke test end-to-end, and lays the plumbing for the provenance/run-manifest generation required by the reproducibility standard.",
+  "acceptanceCriteria": [
+    "A Nextflow (DSL2, nf-core-style) pipeline skeleton is committed that references all containers by immutable digest (sha256:...) — no floating tags.",
+    "A CI smoke test runs the skeleton end-to-end on a trivial synthetic input and passes, confirming the workflow manager and container plumbing work.",
+    "The skeleton includes stub stages for spectrum processing, search/identification, FDR, quantification, and run-manifest emission — stubbed, not implemented — to define the interface for subsequent tasks.",
+    "pnpm build && pnpm test && pnpm lint pass for any TypeScript tooling committed alongside the pipeline.",
+    "Pipeline code is MIT-licensed; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Solution approach & architecture, Tech stack section",
+    "TASKS.md — M0, skeleton-004 row",
+    "proteomics-reanalysis-repro-standard-003 (reproducibility standard must be ratified first)"
+  ],
+  "output": "A committed containerized Nextflow pipeline skeleton with a passing CI smoke test and stub stages for each analysis phase, ready for the DDA reanalysis task to fill in.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-i18n-026",
+  "title": "Translate a delivered datasheet/report (domain reviewer)",
+  "project": "proteomics-reanalysis",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["proteomics", "open-science", "reproducibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Translating a delivered reanalysis datasheet or methods report into additional languages widens the community reach of the project's outputs, particularly for researchers and educators in non-English-speaking countries. The translation requires both language proficiency and domain-specific knowledge (proteomics, reproducibility concepts) to avoid mistranslation of technical terms. A domain reviewer with the target language must sign off before publication. The source document must already be delivered and CC-BY-4.0 licensed.",
+  "objective": "Produce an accurate translation of one delivered reanalysis datasheet or methods report into a target language, reviewed and approved by a domain reviewer with the relevant language competence.",
+  "acceptanceCriteria": [
+    "A delivered CC-BY-4.0 datasheet or methods report (from datasheet-016 or report-011) is selected as the source document.",
+    "The translation accurately renders all technical terms (proteomics, FDR, run manifest, immutable digest, etc.) in the target language without introducing ambiguity or error.",
+    "A domain reviewer with both the target language and proteomics/reproducibility competence reviews and approves the translation before publication.",
+    "The 'not medical advice' notice, attribution requirements, and 'research artifact' framing are preserved in the translation.",
+    "The translated document is licensed CC-BY-4.0 with attribution to the original source document; committed to the project repo."
+  ],
+  "resources": [
+    "proteomics-reanalysis-datasheet-016 (primary source document candidate)",
+    "proteomics-reanalysis-report-011 (alternative source document candidate)",
+    "TASKS.md — Backlog, i18n-026 row"
+  ],
+  "output": "A committed translation of one reanalysis datasheet or methods report, approved by a domain reviewer with the target language, licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

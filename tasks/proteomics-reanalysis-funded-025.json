@@ -1,0 +1,36 @@
+{
+  "id": "proteomics-reanalysis-funded-025",
+  "title": "Funded rerun of a compute-heavy open PRIDE dataset (metered, budget-capped)",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "funded",
+  "priority": "low",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Some open PRIDE cancer datasets are too large to reanalyze within a single donated session. For these, a metered funded rerun via packages/runner can complete the reanalysis under a hard per-task budget cap, with a public cost note. Only open-access, de-identified data; same compliance gate as the donated lane. The funded lane runs only via packages/runner on an Anthropic API key and must never exceed the task's escrow.",
+  "objective": "Reproducibly reanalyze one gate-approved, compute-heavy open PRIDE cancer dataset via the funded runner within a hard budget cap, producing a complete run manifest and aggregate result tables.",
+  "acceptanceCriteria": [
+    "Dataset passed the allow-list gate (open-access, de-identified, license verified, re-id determined per reid-policy-006) before any processing.",
+    "Run executes only via packages/runner with a hard per-task budget cap and never exceeds escrow; a public cost note is recorded in the run manifest and committed.",
+    "Pinned containers (immutable digests); complete run manifest per repro-standard-003; 100% provenance passing CI provenance gate; FDR validated by fdr-010.",
+    "Headline results independently re-executed within the declared tolerance; concordance/divergence reported honestly.",
+    "Pipeline code MIT; aggregate tables CC-BY-4.0; raw data never re-hosted; pnpm build && pnpm test && pnpm lint green; DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Funded-lane discipline section",
+    "packages/runner (Elyos funded runner)",
+    "proteomics-reanalysis-allowlist-002 (compliance gate)",
+    "proteomics-reanalysis-repro-standard-003 (run-manifest schema)",
+    "proteomics-reanalysis-provenance-005 (CI provenance gate)",
+    "TASKS.md — Backlog, funded-025 example JSON"
+  ],
+  "output": "A reproducible reanalysis of one compute-heavy open PRIDE cancer dataset, with run manifest, aggregate result tables, and a public cost note, delivered as a PR; code MIT, tables CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT",
+  "fundedBudgetUsd": 200
+}

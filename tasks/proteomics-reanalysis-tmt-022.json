@@ -1,0 +1,34 @@
+{
+  "id": "proteomics-reanalysis-tmt-022",
+  "title": "Labeled-quant (TMT/iTRAQ) pipeline support",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Many large-scale cancer proteomics studies (e.g., CPTAC-style analyses) use isobaric labeling (TMT, iTRAQ) for quantification rather than label-free DDA or DIA approaches. Supporting labeled quantification extends the project's coverage to a significant fraction of public cancer proteomics datasets. The pipeline must follow the same reproducibility standard: pinned containers (immutable digests), complete run manifests, FDR validation, and 100%-provenance CI gate. Methods review is expected to be heavy given the additional complexity of reporter-ion deconvolution and normalization.",
+  "objective": "Implement a containerized labeled-quantification (TMT/iTRAQ) pipeline extension that meets the same reproducibility standard as the DDA and DIA pipelines, validated on an approved open labeled-quant dataset.",
+  "acceptanceCriteria": [
+    "A containerized TMT/iTRAQ pipeline extension is implemented within the Nextflow workflow, with pinned tool versions (e.g., FragPipe with TMT-Integrator or equivalent) referenced by immutable container digest.",
+    "The pipeline runs on an approved open labeled-quant dataset (passed allow-list gate: open-access, de-identified, license verified, re-id determined).",
+    "FDR-controlled identifications and normalized reporter-ion quantities are validated by the FDR/statistics harness.",
+    "A complete run manifest is produced; 100% of published assertions pass the CI provenance gate.",
+    "Pipeline code is MIT-licensed; aggregate tables are CC-BY-4.0; commit is DCO signed-off; pnpm build && pnpm test && pnpm lint pass."
+  ],
+  "resources": [
+    "proteomics-reanalysis-pilot-009 (DDA pipeline to extend)",
+    "proteomics-reanalysis-fdr-010 (FDR validation harness)",
+    "proteomics-reanalysis-provenance-005 (CI provenance gate)",
+    "TASKS.md — Backlog, tmt-022 row",
+    "PLAN.md — Tech stack section"
+  ],
+  "output": "A committed PR containing the containerized TMT/iTRAQ pipeline extension, validated on an approved open labeled-quant dataset with complete run manifest and passing CI; code MIT, tables CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

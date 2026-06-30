@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-fdr-010",
+  "title": "FDR/statistics validation harness",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Target-decoy FDR control is the foundational statistical safeguard in proteomics: if FDR is misconfigured (wrong decoy strategy, wrong threshold, wrong level — PSM/peptide/protein), the published protein list is inflated or deflated in ways that invalidate the entire reanalysis. The FDR/statistics validation harness checks that FDR is actually controlled at the documented level on each run, not just configured, and validates downstream statistical models (e.g., MSstats/limma settings). This must be a CI gate, not a post-hoc check.",
+  "objective": "Implement an FDR and statistics validation harness that runs as a CI gate, verifying that target-decoy FDR is controlled at the documented level and that downstream statistical parameters match the pinned model specification.",
+  "acceptanceCriteria": [
+    "The harness checks that target-decoy FDR is controlled at the documented level (typically 1%) at the PSM, peptide, and protein levels on each pipeline run, using the decoy method and thresholds recorded in the run manifest.",
+    "The harness validates that downstream statistical analysis parameters (e.g., MSstats/limma settings) match the pinned, documented model and that no undeclared parameters are used.",
+    "The CI gate fails the build if FDR control cannot be verified or if statistical parameters diverge from the pinned model.",
+    "Golden fixtures use synthetic or tiny public spectra only (no patient-derived raw data).",
+    "pnpm build && pnpm test && pnpm lint pass; code is MIT-licensed; commit is DCO signed-off."
+  ],
+  "resources": [
+    "proteomics-reanalysis-skeleton-004 (pipeline skeleton to integrate with)",
+    "proteomics-reanalysis-repro-standard-003 (run-manifest schema, tolerance policy)",
+    "PLAN.md — Pipeline stages (FDR & statistics section), Tech stack"
+  ],
+  "output": "A committed FDR and statistics validation harness integrated as a CI gate with synthetic golden fixtures and passing pnpm build/test/lint; MIT-licensed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

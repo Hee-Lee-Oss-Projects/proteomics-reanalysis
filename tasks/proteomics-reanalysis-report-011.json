@@ -1,0 +1,33 @@
+{
+  "id": "proteomics-reanalysis-report-011",
+  "title": "Reproducibility report + methods doc (concordance/divergence vs. original)",
+  "project": "proteomics-reanalysis",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A reproducible pipeline that produces no human-readable methods record is not reproducible in practice. The reproducibility report documents the full method — every parameter, container digest, database version, FDR threshold, and statistical model — so a third party can re-execute from this document plus the run manifest and the public dataset accession. It must also publish an honest concordance/divergence statement vs. the original publication, explaining differences rather than hiding them, and clearly state that the output is a research artifact, not medical advice.",
+  "objective": "Write and publish the reproducibility report and methods document for the pilot dataset reanalysis, covering every methodological parameter, the numeric-tolerance band used, and an honest concordance/divergence statement vs. the original publication.",
+  "acceptanceCriteria": [
+    "The report documents the full method: dataset accession, container digests, tool versions and all parameters, reference-DB versions, FDR settings and decoy strategy, quantification model, and statistical parameters — sufficient for a third party to re-execute.",
+    "The numeric-tolerance band used in the pilot reanalysis is explicitly stated and justified per stage.",
+    "An honest concordance/divergence statement is published vs. the original publication (if one exists): quantifying overlap in identifications/quantities, explaining divergences (parameter, version, or method differences), and not hiding non-reproducibility.",
+    "The report states clearly that the output is a research artifact, not medical advice.",
+    "The report is licensed CC-BY-4.0 with explicit attribution to the original dataset (accession + authors) and reference databases (UniProt CC-BY attribution); committed to the project repo."
+  ],
+  "resources": [
+    "proteomics-reanalysis-pilot-009 (reanalysis pipeline and run manifest)",
+    "proteomics-reanalysis-fdr-010 (FDR validation results)",
+    "PLAN.md — Reproducibility verification, Medical-content boundary sections",
+    "TASKS.md — M1, report-011 acceptance criteria"
+  ],
+  "output": "A committed reproducibility report and methods document for the pilot dataset reanalysis with honest concordance/divergence statement and a 'not medical advice' notice; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

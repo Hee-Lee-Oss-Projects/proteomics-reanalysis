@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-provenance-005",
+  "title": "Provenance-completeness linter + run-manifest validator (CI gate)",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["proteomics", "cancer", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The reproducibility standard requires that 100% of published quantitative assertions carry a resolvable run-manifest entry. Without an automated CI gate, this guarantee is aspirational. The provenance-completeness linter and manifest validator close this gap: the build fails if any published assertion lacks provenance, if the manifest schema is violated, or if floating container tags or missing checksums/versions are found. Golden fixtures must use synthetic/tiny public spectra — never patient-derived raw data — so CI never ships restricted material.",
+  "objective": "Implement the provenance-completeness linter and run-manifest validator as a CI gate that fails the build on any provenance gap, manifest schema violation, floating container tag, or missing checksum/version.",
+  "acceptanceCriteria": [
+    "CI fails the build if any published assertion (over the countable unit fixed in repro-standard-003) lacks a resolvable run-manifest entry.",
+    "The manifest validator rejects run manifests that violate the schema defined in repro-standard-003: missing fields, floating container tags (no sha256: digest), missing input/output checksums, or missing tool/DB versions.",
+    "Golden test fixtures use only synthetic or tiny public spectra (no patient-derived raw data); fixtures are committed to the repo.",
+    "pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off; code is MIT-licensed."
+  ],
+  "resources": [
+    "PLAN.md — Solution approach, Provenance binding section",
+    "TASKS.md — M0, provenance-005 acceptance criteria",
+    "proteomics-reanalysis-repro-standard-003 (schema to validate against)",
+    "proteomics-reanalysis-skeleton-004 (pipeline skeleton to integrate with)"
+  ],
+  "output": "A committed provenance-completeness linter and run-manifest validator integrated as a CI gate, with synthetic golden fixtures and passing pnpm build/test/lint.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

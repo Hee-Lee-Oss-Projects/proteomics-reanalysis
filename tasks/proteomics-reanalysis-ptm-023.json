@@ -1,0 +1,33 @@
+{
+  "id": "proteomics-reanalysis-ptm-023",
+  "title": "PTM-localization reanalysis module",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Post-translational modifications (PTMs), especially phosphorylation, are central to cancer biology and many PRIDE cancer datasets include phospho-enrichment experiments. PTM-localization analysis (e.g., using Phospho-RS or MSFragger's PTMProphet) adds significant analytical complexity: site localization probabilities, localization FDR, and the interplay with peptide-level FDR all require additional validation. This is a methods-review-heavy addition to the pipeline. Re-identification risk from variant/SAV peptides must be assessed per the reid-policy before any proteogenomic search is attempted.",
+  "objective": "Implement a PTM-localization module (starting with phosphorylation) for the reanalysis pipeline that produces site-localized, FDR-controlled PTM results with full provenance, validated on an approved open phospho-proteomics dataset.",
+  "acceptanceCriteria": [
+    "A PTM-localization module (targeting phosphorylation as the primary PTM) is implemented within the Nextflow workflow, using a pinned tool (e.g., MSFragger/PTMProphet or equivalent) referenced by immutable container digest.",
+    "Site localization probabilities and localization FDR are computed and validated; the FDR/statistics harness is extended to cover PTM-localization FDR.",
+    "The module runs on an approved open phospho-proteomics dataset (passed allow-list gate: open-access, de-identified, license verified, re-id determined); re-identification risk from any proteogenomic search is assessed per reid-policy-006.",
+    "A complete run manifest is produced; 100% of published PTM-level assertions pass the CI provenance gate.",
+    "Pipeline code is MIT-licensed; aggregate tables are CC-BY-4.0; commit is DCO signed-off; pnpm build && pnpm test && pnpm lint pass."
+  ],
+  "resources": [
+    "proteomics-reanalysis-pilot-009 (DDA pipeline to extend)",
+    "proteomics-reanalysis-fdr-010 (FDR validation harness to extend for PTM-level FDR)",
+    "proteomics-reanalysis-reid-policy-006 (re-identification policy for variant searches)",
+    "TASKS.md — Backlog, ptm-023 row"
+  ],
+  "output": "A committed PR containing the PTM-localization module, validated on an approved open phospho-proteomics dataset with complete run manifest and passing CI; code MIT, tables CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
