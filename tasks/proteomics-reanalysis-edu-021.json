@@ -1,0 +1,34 @@
+{
+  "id": "proteomics-reanalysis-edu-021",
+  "title": "Plain-language explainer: what a reproducible reanalysis does/does not show (education only)",
+  "project": "proteomics-reanalysis",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "proteomics", "open-science", "reproducibility", "patient-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M4 is a strictly optional, opt-in track. The core project ships without it. If pursued, this explainer is education-only content for patient advocates and the interested public: it explains what a reproducible reanalysis does and does not show, without any diagnostic, prognostic, or treatment guidance. Every claim must be sourced and provenanced. Release is blocked until a credentialed oncologist AND a patient advocate both sign off — this is a non-skippable dual gate. This task should not begin until M3 is complete and both reviewers are confirmed.",
+  "objective": "Write a plain-language explainer for patient advocates and the interested public describing what a reproducible cancer-proteomics reanalysis does and does not show, framed as education only with a prominent 'not medical advice' notice and sourced claims.",
+  "acceptanceCriteria": [
+    "The explainer is education-only content: it describes what reproducible reanalysis means, why it matters for research trust, and what limits it has — with no diagnostic, prognostic, or treatment guidance and no patient-specific interpretation.",
+    "A prominent 'not medical advice' notice appears on the document; every factual claim is sourced and provenanced.",
+    "Blocking dual sign-off: a credentialed oncologist AND a patient advocate both review and approve the explainer before any release; sign-off evidence (name, credentials, date) is recorded and committed.",
+    "No release of any version of this document without both sign-offs recorded; if either reviewer is not secured, the document is held and the blocker is surfaced.",
+    "The explainer is licensed CC-BY-4.0; verifiedNeed is set to true only once an advocate or educator formally requests it."
+  ],
+  "resources": [
+    "proteomics-reanalysis-report-011 (pilot reproducibility report as source material)",
+    "proteomics-reanalysis-steward-018 (confirmed partner for context on community needs)",
+    "PLAN.md — M4 section, Medical-content boundary section",
+    "TASKS.md — M4, edu-021 acceptance criteria",
+    "CLAUDE.md — Refusal guardrails (unqualified high-stakes advice without risk-tier expert review)"
+  ],
+  "output": "A plain-language 'what a reanalysis does/does not show' explainer for advocates/public, held for release until a credentialed oncologist and patient advocate both sign off; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

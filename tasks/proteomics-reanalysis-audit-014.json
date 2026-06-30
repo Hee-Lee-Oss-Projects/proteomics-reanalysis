@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-audit-014",
+  "title": "Independent reproducibility audit of M1 (3rd machine/operator)",
+  "project": "proteomics-reanalysis",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Independent re-execution in M1 (reexec-012) used a second operator/machine. For M2 robustness, a third independent operator on yet another machine performs a full reproducibility audit of the M1 headline results. This third-party check validates that the reproducibility claim holds beyond a single pairwise comparison and surfaces any environment-specific non-reproducibility. Non-reproducible results are flagged, not silently dropped.",
+  "objective": "Have a third independent operator (different from both the original pilot-009 runner and the reexec-012 verifier) re-execute the M1 pilot reanalysis from the run manifest on a third machine and produce a formal audit report.",
+  "acceptanceCriteria": [
+    "A third operator (different from the original runner and from the reexec-012 operator) re-executes the pilot reanalysis from the run manifest on a third distinct machine/environment.",
+    "Headline results reproduce within the declared numeric tolerance from repro-standard-003; any divergence is flagged with a root-cause note.",
+    "A formal audit report is committed documenting: operator identity (may be pseudonymous), machine/environment, pipeline version, run manifest reference, and per-headline-result reproduction outcome.",
+    "The audit report is licensed CC-BY-4.0 and committed to the project repo."
+  ],
+  "resources": [
+    "proteomics-reanalysis-reexec-012 (M1 re-execution artifact and run manifest reference)",
+    "proteomics-reanalysis-pilot-009 (pipeline and run manifest)",
+    "proteomics-reanalysis-repro-standard-003 (numeric-tolerance policy)",
+    "TASKS.md — M2, audit-014 row"
+  ],
+  "output": "A committed formal reproducibility audit report from a third independent operator/machine confirming or flagging M1 headline result reproducibility; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

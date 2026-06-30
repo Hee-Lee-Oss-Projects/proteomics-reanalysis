@@ -1,0 +1,31 @@
+{
+  "id": "proteomics-reanalysis-reviewer-001",
+  "title": "Name/secure the License+Compliance reviewer (blocking, non-skippable gate role)",
+  "project": "proteomics-reanalysis",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "proteomics", "open-science", "data-licensing", "reproducibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Before any dataset is downloaded or processed, the project requires a named, qualified License+Compliance reviewer with proteomics and data-license/privacy competence. This role has veto authority over all allow-list entries and the controlled-access refusal — it is a hard M0 exit criterion. Without a named reviewer in the seat, no dataset advances past 'pending', M0 cannot exit, and the maintainer must escalate to Elyos governance. The empty-seat fallback must also be documented.",
+  "objective": "Identify, vet, and secure a commitment from a qualified individual to serve as the License+Compliance reviewer for all dataset allow-list decisions, re-identification determinations, and controlled-access refusals on this project.",
+  "acceptanceCriteria": [
+    "A named, qualified person (with proteomics background and data-license/privacy competence) has accepted the License+Compliance reviewer seat in writing before any dataset is downloaded or processed.",
+    "The reviewer's veto authority over allowlist.yml entries and the controlled-access refusal is documented in the project governance record.",
+    "The empty-seat fallback is recorded: no dataset advances past 'pending', M0 cannot exit, and the maintainer escalates to Elyos governance to source a qualified reviewer if the seat is unfilled.",
+    "A document capturing the reviewer's name, qualifications, scope of authority, and fallback procedure is committed to the project repo and licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "PLAN.md — Governance, roles & stakeholders section",
+    "TASKS.md — M0 acceptance criteria for reviewer-001",
+    "CLAUDE.md — Elyos work rules and refusal guardrails"
+  ],
+  "output": "A committed project governance record naming the License+Compliance reviewer, documenting their veto authority, and recording the empty-seat fallback procedure.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

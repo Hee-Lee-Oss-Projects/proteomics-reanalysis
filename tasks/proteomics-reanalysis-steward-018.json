@@ -1,0 +1,31 @@
+{
+  "id": "proteomics-reanalysis-steward-018",
+  "title": "Secure first confirmed adopting/citing/requesting partner",
+  "project": "proteomics-reanalysis",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "proteomics", "open-science", "reproducibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The Elyos 'delivered, not merged' bar requires at least one named partner/steward that has adopted, hosted, cited, or formally requested a reanalysis. Without a confirmed steward, the project cannot declare itself shipped even if all technical work is complete. The outreach thread started in outreach-007 must now convert into a concrete commitment. Once a steward is confirmed, tasks for that beneficiary are updated to verifiedNeed: true and requestor is set.",
+  "objective": "Convert the outreach threads from outreach-007 into a confirmed commitment from at least one named partner (dataset author, curator, reproducibility initiative, PRIDE team, nf-core/proteomics, or equivalent) to adopt, host, cite, or formally request a reanalysis.",
+  "acceptanceCriteria": [
+    "A named dataset author, curator, reproducibility initiative, or community organization confirms in writing that they will adopt, host, cite, or has formally requested a specific reanalysis from this project.",
+    "The steward's name, organization, and commitment type (adopt/host/cite/request) are recorded in a committed document.",
+    "Tasks associated with that beneficiary's specific reanalysis are updated to verifiedNeed: true with requestor set to the confirmed individual/organization.",
+    "The steward confirmation document is licensed CC-BY-4.0 and committed to the project repo."
+  ],
+  "resources": [
+    "proteomics-reanalysis-outreach-007 (outreach log and existing contacts)",
+    "PLAN.md — Verified need, Partner org section",
+    "TASKS.md — M3, steward-018 acceptance criteria"
+  ],
+  "output": "A committed document recording the confirmed partner/steward commitment, with associated task verifiedNeed and requestor fields updated; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

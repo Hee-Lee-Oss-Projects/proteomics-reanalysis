@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-drift-020",
+  "title": "Version-drift detection + refresh process (containers/tools/DBs)",
+  "project": "proteomics-reanalysis",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["proteomics", "reproducibility", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Containers and tools pinned by immutable digest guarantee reproducibility of past reanalyses, but over time upstream images and reference databases (UniProt releases, contaminant databases) change. Without a drift detection process, the project would not know when a pinned environment has become stale or when a security patch in a base image matters. Drift does not invalidate past results but creates maintenance tasks: new reanalyses should use up-to-date references, and stale pipelines become explicit maintenance items.",
+  "objective": "Implement a version-drift detection process that regularly checks for upstream changes (new container image versions, tool releases, reference-DB updates) and converts detected drift into tracked maintenance tasks.",
+  "acceptanceCriteria": [
+    "A drift detection script or CI workflow is implemented that checks for: new versions of pinned analysis tools (MaxQuant/FragPipe/DIA-NN etc.), updates to base container images, and new releases of reference databases (UniProt).",
+    "Detected drift is surfaced as a GitHub issue or tracked maintenance task — not silently ignored.",
+    "The process documents how to refresh a pinned pipeline: update digests, update the run manifest schema references, and re-run CI smoke test.",
+    "The drift detection code is committed as a PR with MIT license; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off."
+  ],
+  "resources": [
+    "proteomics-reanalysis-provenance-005 (provenance linter to integrate with)",
+    "proteomics-reanalysis-repro-standard-003 (pinning requirements)",
+    "PLAN.md — Sustainability & maintenance section",
+    "TASKS.md — M3, drift-020 row"
+  ],
+  "output": "A committed PR containing a version-drift detection script/workflow and a documented refresh process; MIT-licensed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-benchmark-015",
+  "title": "Concordance benchmark vs. published results (>=2 datasets)",
+  "project": "proteomics-reanalysis",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A single concordance statement in the pilot report is insufficient to demonstrate the pipeline's reliability across different datasets and acquisition types. A systematic concordance benchmark across at least two datasets (the pilot DDA dataset from M1 and one DIA dataset from dia-013) quantifies agreement with original published results using a documented metric, explains divergences, and provides reference baselines for the community. Divergences must be explained, not hidden.",
+  "objective": "Produce a concordance benchmark report for at least 2 reanalyzed datasets, quantifying agreement between the reanalysis and the original published results using a documented metric and explaining all divergences.",
+  "acceptanceCriteria": [
+    "For at least 2 datasets (at minimum: the M1 pilot DDA dataset and one additional dataset), the benchmark quantifies agreement between the reanalysis and the original published results using a documented metric (e.g., Jaccard overlap of identifications, correlation of LFQ quantities, overlap at 1% FDR).",
+    "Divergences between the reanalysis and the original are explained — parameter differences, tool version differences, or method differences — and not hidden or smoothed over.",
+    "Outputs are labeled as research artifacts with no clinical claims.",
+    "The benchmark report is licensed CC-BY-4.0 and committed to the project repo."
+  ],
+  "resources": [
+    "proteomics-reanalysis-pilot-009 (M1 DDA reanalysis results)",
+    "proteomics-reanalysis-dia-013 (DIA reanalysis results)",
+    "proteomics-reanalysis-report-011 (concordance/divergence statement for the pilot)",
+    "TASKS.md — M2, benchmark-015 acceptance criteria"
+  ],
+  "output": "A committed concordance benchmark report for at least 2 datasets, with documented metrics, honest divergence explanations, and a 'research artifact' label; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

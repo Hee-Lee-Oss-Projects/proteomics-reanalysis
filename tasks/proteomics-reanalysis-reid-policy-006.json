@@ -1,0 +1,32 @@
+{
+  "id": "proteomics-reanalysis-reid-policy-006",
+  "title": "Proteogenomic re-identification policy (variant-peptide default-deny)",
+  "project": "proteomics-reanalysis",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "proteomics", "data-licensing", "open-science", "reproducibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Mass-spec proteomics data carries a proteogenomic re-identification risk: variant (single-amino-acid-variant / SAV) peptides detected in open-access DDA data can encode germline SNP information functionally equivalent to a genetic identifier, enabling individual re-identification even from nominally de-identified public datasets. Without a published default-deny policy and a per-dataset reviewer-clearance process, this risk can be violated inadvertently. The policy must be in place before any dataset is cleared for analysis, and it must be blocked by the allow-list gate.",
+  "objective": "Publish the project's proteogenomic re-identification policy establishing a default-deny stance for variant/SAV peptide outputs and the conditions under which the License+Compliance reviewer may clear a specific dataset and use for variant search.",
+  "acceptanceCriteria": [
+    "The policy states that variant/proteogenomic identity output (variant/SAV peptides, per-individual genotype-equivalent calls) is default-denied for all datasets unless the License+Compliance reviewer explicitly clears the specific dataset and use case in writing.",
+    "The conditions required for reviewer clearance are defined: e.g., the source license explicitly permits re-id-risk outputs, the dataset is provably cell-line or fully synthetic, or an IRB authorization exists — with no default-allow path.",
+    "The policy specifies that sample-level outputs are kept aggregate where individual-level results add re-identification risk without research need.",
+    "The policy is referenced in the allow-list gate (allowlist-002) as a required determination field (reidDetermination) before any dataset is approved.",
+    "The policy document is licensed CC-BY-4.0 and committed to the project repo."
+  ],
+  "resources": [
+    "PLAN.md — Privacy / PII / re-identification stance section",
+    "TASKS.md — M0, reid-policy-006 row; allowlist-002 acceptance criteria",
+    "proteomics-reanalysis-allowlist-002 (gate that enforces this policy)"
+  ],
+  "output": "A committed proteogenomic re-identification policy document establishing default-deny for variant peptide outputs and the reviewer-clearance process; licensed CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

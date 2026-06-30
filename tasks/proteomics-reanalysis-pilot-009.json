@@ -1,0 +1,35 @@
+{
+  "id": "proteomics-reanalysis-pilot-009",
+  "title": "End-to-end DDA reanalysis of the pilot dataset (containerized)",
+  "project": "proteomics-reanalysis",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "proteomics", "reproducibility", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "With the pipeline skeleton, provenance linter, and gate-approved pilot dataset in place, the first real end-to-end DDA reanalysis can run. This task implements the full analysis pipeline (spectrum processing → search → FDR → quantification → stats) for the pilot dataset, using pinned containers referenced by immutable digest, and produces a complete run manifest. Every published quantitative assertion must carry provenance and pass the CI provenance gate. Only small aggregate result tables are published; raw data stays at the source accession.",
+  "objective": "Implement and run the end-to-end DDA reanalysis pipeline for the gate-approved pilot dataset, producing a complete run manifest, FDR-controlled results, provenance-passing CI, and only aggregate result tables — with raw data never re-hosted.",
+  "acceptanceCriteria": [
+    "The pipeline runs end-to-end in pinned containers (immutable digests) under the workflow manager: spectrum processing → search/identification → FDR control → quantification → statistical analysis.",
+    "A complete run manifest is produced recording: dataset accession + input file checksums, container digests, tool versions (MaxQuant/FragPipe/MSFragger/OpenMS + version), all parameters, reference-DB versions/checksums (UniProt release), random seeds, operator, environment, and duration.",
+    "100% of published quantitative assertions carry a resolvable run-manifest entry and pass the CI provenance gate from provenance-005.",
+    "Only small aggregate result tables are published (protein-level summaries, FDR summary); raw mass-spec files are referenced by PRIDE accession only and never re-hosted.",
+    "Pipeline code is MIT-licensed; aggregate result tables are CC-BY-4.0; commit is DCO signed-off.",
+    "pnpm build && pnpm test && pnpm lint pass; methods review and license/re-id review are passed before merge."
+  ],
+  "resources": [
+    "proteomics-reanalysis-skeleton-004 (pipeline skeleton to build on)",
+    "proteomics-reanalysis-provenance-005 (CI provenance gate)",
+    "proteomics-reanalysis-gate-pilot-008 (PASS artifact + approved dataset accession)",
+    "proteomics-reanalysis-repro-standard-003 (reproducibility standard)",
+    "PLAN.md — Pipeline stages, Tech stack section"
+  ],
+  "output": "A committed PR containing the end-to-end DDA reanalysis pipeline for the pilot dataset, the run manifest, passing CI provenance gate, and aggregate result tables; code MIT, tables CC-BY-4.0.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
