@@ -16,16 +16,16 @@
   "acceptanceCriteria": [
     "Allow-list schema captures: accession (PXD/...), repository, declared license + URL + committed snapshot (SHA-256 + archived URL), accessClass (open | controlled | unknown), instrument/acquisition (DDA/DIA/labeled), piiDetermination, reidDetermination, and status (approved | rejected | pending).",
     "Objective gate rule: PASS only if accessClass=open is established from a cited source statement AND the license is verified for the specific accession AND PII and re-identification determinations are recorded; controlled or unknown access = REJECT (no default-allow).",
-    "dbGaP, EGA, individual-level biobanks, and any identifiable patient data are hard-REJECT and flagged per Elyos refusal guardrails.",
+    "dbGaP, EGA, individual-level biobanks, and any identifiable patient data are hard-REJECT and flagged per Hee-Lee Oss refusal guardrails.",
     "COSMIC and OncoKB are flagged non-commercial: annotation-only-under-terms and never embedded in or redistributed with outputs.",
     "Re-identification rule: variant/proteogenomic identity output is default-denied unless the License+Compliance reviewer clears the specific dataset and use.",
     "Produces a committed, reviewable PASS/REJECT artifact per dataset recording which checks ran and what fired; output documentation licensed CC-BY-4.0.",
     "pnpm build && pnpm test && pnpm lint pass for any committed schema/validator tooling; commit is DCO signed-off."
   ],
   "resources": [
-    "C:\\code\\elyos\\planning\\projects\\proteomics-reanalysis\\PLAN.md",
-    "C:\\code\\elyos\\docs\\good-deed-definition.md",
-    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "C:\\code\\hee-lee-oss\\planning\\projects\\proteomics-reanalysis\\PLAN.md",
+    "C:\\code\\hee-lee-oss\\docs\\good-deed-definition.md",
+    "C:\\code\\hee-lee-oss\\planning\\ROADMAP.md",
     "PRIDE Archive / ProteomeXchange dataset license terms (per accession)",
     "UniProt CC-BY-4.0; COSMIC and OncoKB non-commercial license terms"
   ],

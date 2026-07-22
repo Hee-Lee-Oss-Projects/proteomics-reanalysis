@@ -11,7 +11,7 @@
   "deliverable": "document",
   "tokenEstimate": "small",
   "status": "open",
-  "context": "The Elyos 'delivered, not merged' bar requires at least one named partner/steward that has adopted, hosted, cited, or formally requested a reanalysis. Without a confirmed steward, the project cannot declare itself shipped even if all technical work is complete. The outreach thread started in outreach-007 must now convert into a concrete commitment. Once a steward is confirmed, tasks for that beneficiary are updated to verifiedNeed: true and requestor is set.",
+  "context": "The Hee-Lee Oss 'delivered, not merged' bar requires at least one named partner/steward that has adopted, hosted, cited, or formally requested a reanalysis. Without a confirmed steward, the project cannot declare itself shipped even if all technical work is complete. The outreach thread started in outreach-007 must now convert into a concrete commitment. Once a steward is confirmed, tasks for that beneficiary are updated to verifiedNeed: true and requestor is set.",
   "objective": "Convert the outreach threads from outreach-007 into a confirmed commitment from at least one named partner (dataset author, curator, reproducibility initiative, PRIDE team, nf-core/proteomics, or equivalent) to adopt, host, cite, or formally request a reanalysis.",
   "acceptanceCriteria": [
     "A named dataset author, curator, reproducibility initiative, or community organization confirms in writing that they will adopt, host, cite, or has formally requested a specific reanalysis from this project.",

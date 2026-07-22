@@ -22,7 +22,7 @@
   ],
   "resources": [
     "PLAN.md — Funded-lane discipline section",
-    "packages/runner (Elyos funded runner)",
+    "packages/runner (Hee-Lee Oss funded runner)",
     "proteomics-reanalysis-allowlist-002 (compliance gate)",
     "proteomics-reanalysis-repro-standard-003 (run-manifest schema)",
     "proteomics-reanalysis-provenance-005 (CI provenance gate)",

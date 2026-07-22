@@ -235,7 +235,7 @@ license/PII-gated, per-assertion-provenanced, steward-delivered* reanalysis prog
   track. quantms is organism/disease-agnostic and ships no such guardrails.
 - **Compliance-first, per-accession.** License snapshot + access-class + PII/re-id determination
   recorded before any download; CPTAC open-tier-only with DUA captured; COSMIC/OncoKB embed-ban.
-  This is absent from every competitor and is exactly the Elyos guardrail surface.
+  This is absent from every competitor and is exactly the Hee-Lee Oss guardrail surface.
 - **Provenance honesty as the brand.** Per-assertion manifests + mandatory concordance/divergence
   statements + divergence decomposition. The promise: *every number is reconstructable and its
   agreement with the literature is stated.*
@@ -285,7 +285,7 @@ parameter choices in plain language for the education track.
 
 ## 6. Ten concrete optimizations
 
-1. **Adopt nf-core/quantms as the analysis substrate** and position Elyos as the governance +
+1. **Adopt nf-core/quantms as the analysis substrate** and position Hee-Lee Oss as the governance +
    provenance + curation + delivery layer; don't rebuild engine plumbing.
 2. **Make SDRF-Proteomics a required input/output**, with the run manifest layered on top — gains
    interoperability with quantms/PRIDE and turns metadata harmonization into a shippable artifact.
@@ -316,7 +316,7 @@ parameter choices in plain language for the education track.
   dataset. The most leverage-rich spin-off; lowers the reanalysis barrier below quantms's.
 - **MCP server serving harmonized protein matrices** — expose finished reanalyses (protein/peptide
   matrices + manifests + SDRF) over an MCP endpoint so downstream agents/tools query *provenanced*
-  cancer-proteomics results directly. Natural Elyos-API integration and a public-good data service.
+  cancer-proteomics results directly. Natural Hee-Lee Oss-API integration and a public-good data service.
 - **Tie to `ewing-expression-reanalysis`** — a shared multi-omics reanalysis spine: same
   provenance manifest, license gate, and concordance-reporting machinery across RNA (expression)
   and protein (proteomics) for the same cancer type; cross-omics concordance becomes a deliverable.

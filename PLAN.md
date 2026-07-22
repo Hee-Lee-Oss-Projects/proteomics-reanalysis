@@ -76,7 +76,7 @@ cite, or formally request a specific reanalysis is TO BE SECURED.** Accordingly 
 `verifiedNeed: false`; it flips to `true` only when a named dataset author, lab, curator, journal,
 or reproducibility initiative confirms they want and will use a specific reanalysis. Securing this
 last-mile beneficiary is a first-class M0/M1 objective and a precondition for declaring any deed
-*shipped* (per the Elyos "delivered, not merged" bar).
+*shipped* (per the Hee-Lee Oss "delivered, not merged" bar).
 
 **Partner org.** TO BE SECURED. Candidate stewards: the **EMBL-EBI PRIDE** team / ProteomeXchange,
 an academic proteomics core or reproducibility initiative, the **nf-core/proteomics** community,
@@ -103,7 +103,7 @@ running reproducibility checks. Original dataset authors are pursued as per-rean
 
 **Non-goals**
 - **Not** processing or re-hosting any controlled-access or identifiable patient data (dbGaP, EGA,
-  individual-level biobanks, clinical records). Hard refusal under Elyos guardrails.
+  individual-level biobanks, clinical records). Hard refusal under Hee-Lee Oss guardrails.
 - **Not** re-publishing or mirroring the raw mass-spec data itself (we reference accessions; the
   repository remains the source of record). Small derived/aggregate result tables only, where the
   source license permits.
@@ -208,7 +208,7 @@ proving ground.
    aggregate result tables. Raw data is *referenced by accession*, never re-hosted.
 
 **Tech stack**
-- Pipelines/tooling/validators: **TypeScript + ESM + pnpm** for the Elyos-facing tooling
+- Pipelines/tooling/validators: **TypeScript + ESM + pnpm** for the Hee-Lee Oss-facing tooling
   (manifest schema, validators, CI gates, allow-list linter); **Nextflow (DSL2)** /
   nf-core-style for the analysis workflow; analysis tools (MaxQuant, FragPipe/MSFragger, OpenMS,
   DIA-NN, Percolator, MSstats/R, Python/pandas) invoked inside pinned containers.
@@ -254,7 +254,7 @@ below are binding and override convenience.**
 
 ### Hard boundary — cancer data scope (binding)
 **ONLY open-access / aggregate / de-identified data is in scope.** The following are **OUT OF SCOPE
-and never acceptable** under Elyos guardrails:
+and never acceptable** under Hee-Lee Oss guardrails:
 - **Controlled-access repositories** — **dbGaP, EGA**, and any individual-level biobank or registry
   requiring an access committee / Data Use Agreement / IRB. These need authorized access + IRB
   oversight this project does not have.
@@ -267,7 +267,7 @@ and never acceptable** under Elyos guardrails:
   (see re-identification control below).
 
 If a task even proposes touching controlled-access or identifiable data, it is **refused and
-flagged** per Elyos refusal guardrails — not deprioritized.
+flagged** per Hee-Lee Oss refusal guardrails — not deprioritized.
 
 ### Approved data sources (open-access only; verified per dataset)
 Every dataset must be entered in `datasets/allowlist.yml` with a recorded license + access class +
@@ -285,7 +285,7 @@ PII/re-id determination and an `approved` status before any download:
 - **COSMIC** and **OncoKB** — **NON-COMMERCIAL** licenses. Treated as restricted: may be consulted
   for annotation only under their terms, **never embedded in or redistributed with outputs**, never
   relicensed. Default: avoid in redistributed artifacts; if unavoidable for annotation, the license
-  policy task governs and the output records the restriction. (Elyos is non-profit/public-good, but
+  policy task governs and the output records the restriction. (Hee-Lee Oss is non-profit/public-good, but
   outputs are openly licensed for *all* reuse including commercial, which is incompatible with NC
   source data — hence the embed ban.)
 
@@ -356,7 +356,7 @@ dimensions, all required before a deed is "done":
 a published containerized pipeline (immutable digests); a complete run manifest; 100% provenance on
 published assertions; FDR validated; an honest concordance/divergence statement; **independent
 re-execution to the same result within tolerance**; license/PII/re-id gate passed; and **at least
-one partner/steward that has adopted, hosted, cited, or formally requested it.** Per Elyos,
+one partner/steward that has adopted, hosted, cited, or formally requested it.** Per Hee-Lee Oss,
 *delivered ≠ merged* — the reanalysis must be in a beneficiary's hands and reproducible.
 
 **Per-deed Definition of Done.** Acceptance criteria met + CI green
@@ -417,7 +417,7 @@ project ships without it.
 
 The itemized, schema-mapped backlog lives in [`TASKS.md`](./TASKS.md), organized by the milestones
 above (M0–M4) plus a sized backlog and an opt-in funded-lane option for compute-heavy reruns. Each
-task maps to an Elyos Task JSON and carries a type, size, risk tier, deliverable, dependencies, and
+task maps to a Hee-Lee Oss Task JSON and carries a type, size, risk tier, deliverable, dependencies, and
 reviewer. M0 deliberately front-loads the compliance and reproducibility guardrails before any
 dataset is processed.
 
@@ -429,7 +429,7 @@ dataset is processed.
   any dataset; owns the controlled-access refusal and the re-identification determination. **Naming a
   qualified person is a hard M0 exit criterion.** **Documented fallback if the seat is empty:** no
   dataset advances past `pending`, no download/processing begins, M0 cannot exit; the maintainer
-  escalates to Elyos governance/board to source a qualified reviewer before any data work proceeds.
+  escalates to Hee-Lee Oss governance/board to source a qualified reviewer before any data work proceeds.
 - **Bioinformatics / methods reviewers (rotation):** proteomics analysts who review search/FDR/quant/
   stats and the concordance claims. TO BE SECURED.
 - **Reproducibility verifier:** the independent operator (rotated) who re-executes headline results
@@ -443,7 +443,7 @@ dataset is processed.
   SECURED** — required for "shipped."
 - **Partner / requestor:** original dataset authors, curators, a reproducibility initiative, or the
   PRIDE/nf-core community; a named representative is TO BE SECURED.
-- **Elyos governance/board:** arbiter for edge cases (borderline license, borderline re-id risk)
+- **Hee-Lee Oss governance/board:** arbiter for edge cases (borderline license, borderline re-id risk)
   under the published conflict-of-interest / veto checklist.
 
 ## Dependencies & integrations
@@ -459,7 +459,7 @@ dataset is processed.
   binaries vs. invoking them).
 - **Workflow & containers** — Nextflow (nf-core/proteomics alignment), Docker/Apptainer; SBOM
   tooling.
-- **Elyos pieces:** Task schema (`packages/schema`), CLI workspace/PR flow (`packages/cli`,
+- **Hee-Lee Oss pieces:** Task schema (`packages/schema`), CLI workspace/PR flow (`packages/cli`,
   `packages/core`), the **funded runner** (`packages/runner`) for any opt-in funded reruns with a
   hard budget cap, governance proposal/registry process. Donated lane by default — humans run their
   own agents.
@@ -487,7 +487,7 @@ dataset is processed.
   *compliance* (processing out-of-scope data), *re-identification* (variant peptides), and *data
   integrity* (un-provenanced or irreproducible results) — addressed by the gates above.
 - **Secrets handling:** open-access datasets need no credentials; any incidental tokens (e.g., a
-  container registry) stay out of logs, receipts, and commits per Elyos rules. The donated lane never
+  container registry) stay out of logs, receipts, and commits per Hee-Lee Oss rules. The donated lane never
   runs headless or authenticates an agent. The funded lane runs only via `packages/runner` on an
   Anthropic API key with a hard per-task budget cap and never exceeds escrow.
 - **PII / re-identification:** open-access, de-identified data only; default-deny on variant
@@ -533,7 +533,7 @@ dataset is processed.
 ## References
 
 - Project proposal: `governance/proposals/proteomics-reanalysis.md` (TO BE CREATED)
-- Elyos work rules: `CLAUDE.md`
+- Hee-Lee Oss work rules: `CLAUDE.md`
 - Good Deed Definition & risk tiers: `docs/good-deed-definition.md`
 - Task JSON schema: `packages/schema/src/schemas.ts`
 - Portfolio roadmap (cancer track guardrails): `planning/ROADMAP.md`
@@ -606,14 +606,14 @@ the plan above (and to `TASKS.md`). Each is concrete and already reflected in th
     never an unsupported "dataset" output for raw data) and a funded-task example carrying
     `fundedBudgetUsd` per the schema's conditional requirement.
 25. **Explicit refusal hooks** for clinical-advice tasks and any controlled/identifiable-data proposal
-    (refuse + flag), wired into the quality gates, risks, and security sections per Elyos guardrails.
+    (refuse + flag), wired into the quality gates, risks, and security sections per Hee-Lee Oss guardrails.
 
 ---
 
 ## Review sign-off
 
 A completeness + correctness review was performed against the PLAN_SPEC 17-section structure, the
-Elyos CLAUDE.md work rules, the Good Deed Definition + risk tiers, the ROADMAP cancer guardrails,
+Hee-Lee Oss CLAUDE.md work rules, the Good Deed Definition + risk tiers, the ROADMAP cancer guardrails,
 and the Task JSON schema. Findings and fixes:
 
 - **Section completeness:** all 17 required H2 sections are present and in the mandated order; the
@@ -640,5 +640,5 @@ and the Task JSON schema. Findings and fixes:
   code-license decisions; per-stage numeric tolerance; whether M4 is pursued. These are honest
   unknowns, not gaps in the plan.
 
-Outcome: **plan is internally consistent, schema-faithful, and compliant with Elyos guardrails.**
+Outcome: **plan is internally consistent, schema-faithful, and compliant with Hee-Lee Oss guardrails.**
 Remaining blockers are external (secure reviewer + steward) and are tracked as hard M0/M1 exits.

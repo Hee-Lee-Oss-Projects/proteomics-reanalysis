@@ -11,7 +11,7 @@
   "deliverable": "document",
   "tokenEstimate": "small",
   "status": "open",
-  "context": "For the reanalysis outputs to be reusable and citable, each reanalysis needs a structured datasheet that documents provenance, license, limitations, and how to cite it. A reuse/citation tracking mechanism is also needed so the project can measure real-world adoption — a key metric for Elyos 'delivered, not merged'. The datasheet template should be standardized across reanalyses so the community can rely on a consistent format.",
+  "context": "For the reanalysis outputs to be reusable and citable, each reanalysis needs a structured datasheet that documents provenance, license, limitations, and how to cite it. A reuse/citation tracking mechanism is also needed so the project can measure real-world adoption — a key metric for Hee-Lee Oss 'delivered, not merged'. The datasheet template should be standardized across reanalyses so the community can rely on a consistent format.",
   "objective": "Create a standardized per-reanalysis datasheet template and produce the first datasheet for the pilot reanalysis, plus set up a mechanism for tracking external reuse and citation events.",
   "acceptanceCriteria": [
     "A standardized per-reanalysis datasheet template is defined covering: dataset accession + title, pipeline version, container digests, run manifest reference, output license (CC-BY-4.0), attribution requirements (original dataset authors, repository, reference databases), limitations, 'not medical advice' notice, and a 'how to cite' section.",

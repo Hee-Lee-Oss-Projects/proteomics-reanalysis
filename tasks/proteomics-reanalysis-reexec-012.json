@@ -11,7 +11,7 @@
   "deliverable": "document",
   "tokenEstimate": "medium",
   "status": "open",
-  "context": "The Elyos Definition of Shipped requires that headline results be independently re-executed by a different operator on a different machine within the declared numeric tolerance before publication. This is a blocking gate — a reanalysis that cannot be independently reproduced is not shipped and the blocker is surfaced. The re-execution uses only the run manifest + pipeline code + the public dataset accession: no out-of-band information from the original operator. Non-reproducible results are flagged with root-cause notes, not silently dropped.",
+  "context": "The Hee-Lee Oss Definition of Shipped requires that headline results be independently re-executed by a different operator on a different machine within the declared numeric tolerance before publication. This is a blocking gate — a reanalysis that cannot be independently reproduced is not shipped and the blocker is surfaced. The re-execution uses only the run manifest + pipeline code + the public dataset accession: no out-of-band information from the original operator. Non-reproducible results are flagged with root-cause notes, not silently dropped.",
   "objective": "Have a different operator re-execute the pilot dataset reanalysis from the run manifest and pipeline on a different machine, verify that headline results reproduce within the declared tolerance, and commit the re-execution evidence artifact.",
   "acceptanceCriteria": [
     "A different operator (not the original pilot-009 runner) re-runs the pipeline from the run manifest and public dataset accession on a different machine, with no out-of-band parameter sharing.",
