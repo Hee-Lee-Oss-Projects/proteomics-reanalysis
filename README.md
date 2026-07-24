@@ -6,7 +6,7 @@ Most published cancer-proteomics results are effectively irreproducible by a thi
 
 **Definition of shipped:** | Container/environment fully pinned by immutable digest (no floating tags) | n/a | 100% of pipelines | | Datasets passing the license + PII + re-identification gate before any processing | n/a | 100% (no processing of an un-cleared dataset) | | Reproducibility outcome reported h
 
-This is an **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Platform: https://github.com/jdev1977/hee-lee-oss
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
 
 ## Plan
 - [PLAN.md](./PLAN.md) — robust enterprise plan (vision, architecture, roadmap, risks; includes an applied-improvements appendix + review sign-off)
